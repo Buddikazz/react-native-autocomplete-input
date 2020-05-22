@@ -212,9 +212,10 @@ class Autocomplete extends Component {
 }
 
 const border = {
-  borderColor: '#b9b9b9',
+  borderColor: '#b3d1ff',
   borderRadius: 1,
-  borderWidth: 1
+  borderWidth: 1,
+  borderRadius:10
 };
 
 const androidStyles = {
@@ -223,13 +224,14 @@ const androidStyles = {
   },
   inputContainer: {
     ...border,
-    marginBottom: 0
   },
   list: {
-    ...border,
+    borderColor: '#b3d1ff',
+    borderRadius: 1,
+    borderWidth: 1,
     backgroundColor: 'white',
     borderTopWidth: 0,
-    margin: 10,
+    margin: 5,
     marginTop: 0
   }
 };
@@ -243,7 +245,7 @@ const iosStyles = {
   },
   input: {
     backgroundColor: 'white',
-    height: 40,
+    height: 35,
     paddingLeft: 3
   },
   list: {
@@ -259,8 +261,10 @@ const iosStyles = {
 const styles = StyleSheet.create({
   input: {
     backgroundColor: 'white',
-    height: 40,
-    paddingLeft: 3
+    height: 35,
+    paddingLeft: 3,
+    borderRadius:10,
+    padding:0
   },
   ...Platform.select({
     android: { ...androidStyles },
